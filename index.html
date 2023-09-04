@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="icon" type="image/png" href="https://img.icons8.com/ios/50/dog-paw-print.png">
+        <title>Mi primera website</title>
+    </head>
+       <body>
+        <h1>Galeria Dante de la montaña</h1>
+        <p>Bienvenidos a mi galeria</p>
+        <p>El mundo de Dante <br>
+            <br> <!--br sirve para hacer un salto de linea-->
+            <hr> <!-- hr crea una linea para separar que despues se puede personalizar con css-->
+        <a href="imgs/Bernes.jpg">
+        <img src="imgs/Bernes.jpg" width="150">
+        </a>
+        <a href="imgs/Bernes sentado.jpg">
+        <img src="imgs/Bernes sentado.jpg" width="150">
+        </a> <br>
+        <br>
+        <a href="imgs/Cachorro carita.jpg">
+        <img src="imgs/Cachorro carita.jpg" width="150">
+        </a>
+        <a href="imgs/Cachorro hoja.jpg">
+            <img src="imgs/Cachorro hoja.jpg" width="150">
+        </a> <br>
+        <br>
+        <a href="imgs/Cachorro.jpg">
+        <img src="imgs/Cachorro.jpg" width="150">
+        </a>
+        <a href="imgs/Carita.jpg">
+        <img src="imgs/Carita.jpg" width="150">
+        </a>
+        <a href="imgs/Feliz.jpg">
+        <img src="imgs/Feliz.jpg" width="150">
+        </a>
+        </p>
+        <hr>
+        
+        <h1>Mis actividades favoritas</h1>
+        <a href="imgs/Dante.jpeg">
+        <img src="imgs/Dante.jpeg" width="150">
+         </a>
+         <ul> <!--ul es una lista desordenada-->
+            <li>Comer snacks</li>
+            <li>Revolcarme en el barro</li>
+            <li>Nadar en el rio</li>
+            <li>Jugar con ramas que encuentro tiradas</li>
+            <li>Recibir cariñitos en la panza</li>
+
+        </ul>
+        <hr>
+        <ol>
+            <li>Dante se despierta, se sube a la cama, juega y pide cariño un buen rato</li>
+            <li>Despues espera para salir a pasear</li>
+            <li>Sale a pasear, hace sus cositas, olfatea y vuelve a casa</li>
+            <li>Desayuna y despues duerme hasta su proxima salida</li>
+        </ol>
+        <hr>
+        <!--<form></form> etiqueta para crear un formulario-->
+        <form>
+            <!--<fieldset></fieldset> para encerrar o crear un recuadro para agrupar informacion
+            de un formulario. Se coloca al inicio de la información que quiero encerrar y lo cierro al final de 
+            de esta información-->
+            <fieldset>
+            <!--Etiqueta <legend>nombre del recuadro</legend> para dar un nombre a la información del formulario que se agrupa en el recuadro-->
+            <legend>Información personal</legend>
+            <label for="nombre"> Nombre
+              <input id= "nombre" type="text"
+          placeholder="Escribe tu nombre aquí"
+          maxlength="15">
+                     </label>  <!-- preguntar porque en fin de la etiqueta label aparece en rojo-->
+          <br>
+            <label for="apellido"> Apellido
+              <input id= "apellido" type="text"
+          placeholder="Escribe tu apellido aquí"
+          maxlength="15">
+                     </label>
+           <br>
+            <label for="correo"> Correo
+              <input id="correo" value="micorreo@hotmail.com"
+               placeholder="Escribe tu correo aquí" readonly  maxlength="20"> <!-- readonly sirve para dejar el texto para solo escritura-->
+               </label>
+            <br>
+            <!--range sirve para crear una barra para seleccionar el nivel, por ejemplo rango de edad o de interes-->
+        <label for="edad"> Edad
+            <input id="edad" type="range" min="15" max="20">
+        </label>
+        <br>
+        <!--date, para agregar calendario y establecer fecha. se puede colocar fecha min, max y la fecha que desee que siempre aparezca de primera
+        en el calendario-->
+        <label for="fecha"> Fecha
+        <input type="date" min="2023-07-06" max="2023-08-06" value="2023-07-06">
+          </label>
+          <br>
+       <label for="contraseña"> Contraseña
+         <input type="password">
+        </fieldset>
+         <br>
+         <!--Etiqueta para agregar el correo-->
+            <label for="email"> Email
+                <input type="email">
+            </label>
+            <br>
+            <!--Etiqueta para seleccionar color-->
+            <label for="color"> Color
+                <input type="color">
+            </label>
+            <br>
+            <!--Etiqueta file par subir archivo, si quiero subir varios archivos agrego el atributo multiple, si solo quiero
+            subir un archivo no coloco multiple-->
+            <label for="subir archivo">Subir archivo
+                <input type="file" multiple>
+            </label>
+            <br>
+            <!--Etiqueta <select></select> se utiliza para crear una lista desplegable
+            se debe usar el atributo name para hacer referencia a los datos del formulario-->
+            <label for="marca"> Selecciona la marca de carro
+                <select name="carros" id="carros">
+                    <option value="Ford"> Ford </option>
+                    <option value="Mazda"> Mazda </option>
+                    <option value="Mercedez"> Mercedez </option>
+                    <option value="Volkswagen"> Volkswagen</option>
+                </select>
+            </label>
+            <br>
+            <!--radio genera los circulos para seleccionar opciones como el genero.
+            la etiqueta radio por si sola permite seleccionar todas las ocpiones, en
+        este caso podria seleccionar todos los generos a la vez, por esto para lograr que el
+    radio sea de seleccion unica, se debe crear un grupo, y esto se hace usando el atributo name, al estar agrupados
+solo me deja escoger una opcion y no todos al tiempo-->
+            <label for="Genero"> Selecciona el genero con el que te identificas
+            </label>
+        <label for=""> Femenino
+       <input type="radio" name="genero"/>
+        </label> 
+        <label for=""> Masculino
+          <input type="radio" name="genero"/>
+         </label>
+         <label for=""> Otro
+           <input type="radio" name="genero"/>
+         </label>
+         <br>
+         <label for=""> Estado civil
+         </label>
+         <label for=""> Soltero
+           <input type="radio" name="estado"/>
+           <label/>
+           <label for=""> Casado
+            <input type="radio" name="estado"/>
+           </label>
+           <label for=""> Otro
+             <input type="radio" name="estado"/>
+           </label>
+           <br><br>
+           <!--Checkbox es similar a radio pero me genera unas cajas para seleccionar. preguntar como se hace para seleccionar solo una casilla-->
+           <label for=""> ¿Cúal es tu deporte favorito? </label>
+           <br>
+           <label for=""> Futbol
+             <input type="checkbox" name="deporte"/>
+           </label>
+           <br>
+           <label for=""> Natación
+             <input type="checkbox" name="deporte"/>
+           </label>
+           <br>
+           <label for=""> Senderismo
+             <input type="checkbox" name="deporte"/>
+           </label>
+           <br>
+           <!--etiqueta textarea se utiliza cuando se necesita que el usuario ingrese una opción por ejemplo-->
+         <label for=""> Sugerencias <br>
+           <textarea name="sugerencias" id="sugerencias"> </textarea>
+         </label> 
+         <br><br>
+              <!--las etiquetas button o submit crean botones para enviar información, la diferencia es que button necesita que se le
+            agregue codigo para que cumpla su funcion mientras que submit siempre envia independienteme de que se le haya agregado una
+        funcionalidad o no. El value se agrega para que en el boton aparezca la opcion enviar o la que se necesite -->
+         <input type="button" value="Enviar">
+         <br><br>
+         <input type="submit" value="Enviar">
+         <br><br>
+        <!-- etiqueta reset borra todo lo que tengo en un formulario. El value es para darle nombre al boton-->
+         <label for="nombre"> Nombre
+           <input id="nombre" type="text">
+         </label>
+         <input type="button" value="Enviar">
+         <input type="reset" value="Limpiar">
+              </form>
+            <br>
+            <!--para agregar imagenes y videos en codepen para la landing page
+            imagenes
+          <img src="https://res.cloudinary.com/dlzbbrd79/image/upload/v1689105364/Landing/Bernes_sentado_xkp69a.jpg"
+        width="250">
+       para agregar videos desde paginas libres
+      <etiquetas: controls coloca todas las herramientas de reproduccion del video
+    loop= hace que el video se repita de forma indefinida
+  <video width="350">
+    <source src="https://v4.cdnpk.net/videvo_files/video/free/video0457/large_watermarked/_import_60b9bd52c363a0.05045531_FPpreview.mp4">
+  </video>-->
+  <!--para agregar audios se utiliza audio con las respectivas etiquetas que son similares a las de video
+  <audio controls>
+    <source src="horse.ogg" type="audio/ogg">
+  <source src="horse.mp3" type="audio/mpeg">
+Your browser does not support the audio tag (esta advertencia se coloca porque hay algunos buscadores que no soportan ciertos audios
+entonces para adecuadas practica se coloca este anuncio)-->  
+<!--iframe
+esta  etiqueta de <iframe>permite insertar un documento HTML  dentro deotro documento
+  Al usar esta  etiqueta, la otra pagina web se va a mostrar con sus propias caracteristicas
+un uso excesivo de iframe puede causar que el rendimiento de nuestra pagina sea bajo
+<iframe src="https://www.iconarchive.com/" width="750" height="250"></iframe>
+los videos de youtube solo se  copian colocando el enlace de la opcion copiar codigo de insercion y se copia la direccion
+con la etiqueta iframe automaticamente, asi que solo es copiar y pegar-->
+ <!--TABLAS
+etiqueta inicia con <table> y termina </table>
+cada fila de la tabla inicia con <tr> y termina con </tr>
+para el encabezado de la tabla se inicia con la etiqueta <th> y finaliza con </th>
+el resto de las casillas de la tabla se inician con <td> y se terminan con </td>-->
+<table>
+  <tr>
+    <th>Nombre</th>
+    <th>Raza</th>
+    <th>Edad</th>
+    </tr>
+  <tr>
+    <td>Dante</td>
+    <td>Bernes</td>
+    <td>20 meses</td>
+    </tr>
+  <tr>
+    <td>Lizzy</td>
+    <td>Boxer</td>
+    <td>6 años</td>
+  </tr>
+  <tr>
+    <td>Brownie</td>
+    <td>Pomerania</td>
+    <td>2 años</td>
+</table>
+
+<!--Para citar la fuente de un video se utiliza la etiqueta blockquote-->
+<p>Este video fue tomado de:</p>
+<blockquote> https://www.freepik.es/ </blockquote>
+<video width="350" controls loop>
+  <source src="https://v4.cdnpk.net/videvo_files/video/free/video0457/large_watermarked/_import_60b9b6d258c095.85603337_FPpreview.mp4"></video>
+<br>
+<!--Para crear un navegador en forma de lista,muy util para aplicaciones moviles o vistas de celular pero no para pagina web-->
+<nav>
+  <ul>
+    <li><a href="#"> Nosotros</a></li>
+    <li><a href="#"> Sobre mi</a></li>
+    <li><a href="#"> Servicios</a></li>
+    <li><a href="#"> Contacto</a></li>
+  </ul>
+</nav>
+<!--Para crear un navegador para pc y  que  se vea en forma horizontal
+el # es para vincular los titulos de las listas-->
+
+<nav>
+  <a href="aqui el enlace"> Nosotros</a>
+  <a href="#"> Sobre mi</a>
+  <a href="#"> Servicios</a>
+  <a href="#"> Contacto</a>
+ </nav>
+
+ <!--Otra forma de crear un navegador, con la opcion de moverse entre dos listas solo dando clic en una de las opciones-->
+<br>
+<h1>Rutas caninas</h1>
+<p>Animate a vivir muchas aventuras con tu peludo</p>
+<h3>Menú</h3>
+<nav id="menu">
+  <ul>
+    <li><a href="#inicio">Inicio</a></li>
+    <li><a href="#rutas">Rutas </a></li>
+    <li><a href="#galeria">Galeria</a></li>
+    <li><a href="#contactanos">Contactanos</a></li>
+     </ul>
+</nav> <br><br>
+<p>Aquí encontraras al mejor parche para ir en busqueda de la aventura</p>
+<p>Somo un grupo de tutores perrunos amantes de la naturaleza y de nuestros peludos aventureros</p>
+
+<h2 id="inicio"><img src="https://icons.iconarchive.com/icons/iconsmind/outline/48/Bear-icon.png" width="20"> Inicio <a href="#menu"> Volver </a></h2>
+<h2 id="rutas"><img src="https://icons.iconarchive.com/icons/iconsmind/outline/48/Bear-icon.png" width="20"> Rutas <a href="#menu"> Volver </a></h2> 
+<h2 id="galeria"><img src="https://icons.iconarchive.com/icons/iconsmind/outline/48/Bear-icon.png" width="20"> Galeria <a href="#menu"> Volver </a></h2> 
+<h2 id="contactanos"><img src="https://icons.iconarchive.com/icons/iconsmind/outline/48/Bear-icon.png" width="20"> Contactanos <a href="#menu"> Volver</a></h2> 
+ 
+<br><br>
+<nav>
+   <a href> Sobre mi</href>
+   <a href> Rutas disponibles</href>
+    <a href> Galeria</href>
+    <a href> Contactanos</href>
+    
+</nav>
+
+</body>
+</html>
+    
